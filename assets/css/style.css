@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+}
+
+header {
+    width: 100%;
+    background: lightblue;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+aside {
+    width: fit-content;
+    padding: .5rem;
+}
