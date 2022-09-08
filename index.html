@@ -35,32 +35,53 @@
 
   <body>
     <!-- Header -->
-    <header >Cocktail Finder</header>
+    <header>Cocktail Finder</header>
     
+    <!-- div for both search and main content -->
+<div class="allContent">
     <!-- aside for search form and previous search buttons -->
-    <aside class="">
+    <aside class="sidebar">
     
         <!-- Search cocktail form -->
-    <form>
-        <label for="cocktail">Search for a Cocktail</label><br>
-        <input type="text" name="cocktail"><br>
-        <input type="submit" for="cocktail">
-    </form>
-      <hr />
+        <form>
+            <input type="text" name="cocktail" placeholder="Search for a Cocktail"><br>
+            <button for="cocktail" class="btn" id="searchBtn">Search</button>
+        </form>
+        <hr />
 
-      <!-- Past Searches -->
-      <div id="pastSearches">
-        <button>bloody mary</button>
-      </div>
+        <!-- Past Searches -->
+        <div id="pastSearches">
+            <button class="pastSearchBtn">bloody mary</button>
+        </div>
     </aside>
 
-    <!-- cocktail ingredients -->
-    <div class="container">
+    <!-- main content -->
+    <div class="mainContent">
+         <div class="cocktailInfo">
+             <h2 class="cocktailName">bloody mary</h2>
+             <!-- ingredients -->
+             <div class="ingredients">
+                <h2>Ingredients List</h2>
+                <ul class="ingredientsList">
+                    <li>liquor</li>
+                    <li>liquor</li>
+                    <li>liquor</li>
+                    <li>liquor</li>
+                </ul>
+             </div>
+             <!-- instructions -->
+             <div class="instructions">
+            <h2>instructions</h2>
+             <p class="recipe">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nobis incidunt nostrum temporibus voluptas ut vero unde dolore necessitatibus, placeat molestiae officiis facilis quasi, animi dolor quidem, dicta voluptatibus. Itaque architecto deleniti nisi asperiores porro animi, possimus et ex perferendis repellendus? Consequatur blanditiis reprehenderit iusto laboriosam magnam! Incidunt, porro odit?</p>
+            </div>
 
+        </div>
 
     </div>
+     <img src="assets\images\200.png" alt="placeholder" id="cocktailImg">
 
 
+</div>
 
     <script src="assets\js\script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
