@@ -20,21 +20,23 @@ header {
 .allContent {
     display: flex;
 }
+
 .sidebar {
     min-width: fit-content;
-    padding: .5rem;
-    border: 2px solid black;
+    padding: 30px;
     height: 100vh;
+    border-right: rgb(177, 177, 177) solid 2px;
 }
+
 form {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid rgb(177, 177, 177);
 }
+
 input {
     padding: 10px;
     border-radius: .25rem;
     margin: .25rem 0;
 }
-
 
 .btn {
     cursor: pointer;
@@ -54,6 +56,7 @@ input {
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
+
 .btn:hover {
     color: #fff;
     background-color: #0b5ed7;
@@ -88,7 +91,6 @@ input {
 .cocktailInfo {
     display: flex;
     flex-wrap: wrap;
-    border: 2px solid black;
     padding: 10px;
 }
 
@@ -99,8 +101,12 @@ input {
 }
 
 #cocktailImg {
-    border: 2px solid black;
     width: auto;
     max-height: 400px;
+    padding-right: 50px;
+    padding-top: 30px;
 }
 
+.mainContent {
+    margin-left: 50px;
+}
