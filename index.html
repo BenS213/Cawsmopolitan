@@ -8,10 +8,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet">
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
@@ -22,7 +23,8 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ["Inter", "sans-serif"],
+              Righteous: ["Righteous", "cursive"],
+              "IBM Plex Sans": ["IBM Plex Sans", "sans-serif"],
             },
           },
         },
@@ -33,9 +35,9 @@
   </head>
 
 
-  <body>
+  <body class="IBM Plex Sans">
     <!-- Header -->
-    <header>Cocktail Finder</header>
+    <header class="font-Righteous text-5xl">Personal Mixologist</header>
 
     <!-- div for both search and main content -->
 <div class="allContent">
@@ -57,11 +59,11 @@
     <!-- main content -->
     <div class="mainContent">
          <div class="cocktailInfo">
-             <h2 class="cocktailName">bloody mary</h2>
+             <h2 class="cocktailName text-3xl">bloody mary</h2>
              <!-- ingredients -->
-             <div class="ingredients">
+             <div class="ingredients text-2xl">
                 <h2>Ingredients List</h2>
-                <ul class="ingredientsList">
+                <ul class="ingredientsList text-xl">
                     <li>liquor</li>
                     <li>liquor</li>
                     <li>liquor</li>
@@ -70,7 +72,7 @@
              </div>
              <!-- instructions -->
              <div class="instructions">
-            <h2>instructions</h2>
+            <h2 class="text-2xl">instructions</h2>
              <p class="recipe">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nobis incidunt nostrum temporibus voluptas ut vero unde dolore necessitatibus, placeat molestiae officiis facilis quasi, animi dolor quidem, dicta voluptatibus. Itaque architecto deleniti nisi asperiores porro animi, possimus et ex perferendis repellendus? Consequatur blanditiis reprehenderit iusto laboriosam magnam! Incidunt, porro odit?</p>
             </div>
 

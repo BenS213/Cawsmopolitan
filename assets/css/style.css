@@ -6,12 +6,12 @@ body {
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
-    background-color: lightgray;
+    background-color: white;
 }
 
 header {
     width: 100%;
-    background: lightblue;
+    background: #c53f29;
     text-align: center;
     padding: 1rem;
     font-size: 2rem;
