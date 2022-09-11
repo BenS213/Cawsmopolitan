@@ -11,10 +11,11 @@ body {
 
 header {
     width: 100%;
-    background: #c53f29;
+    background: #11405c;
     text-align: center;
     padding: 1rem;
     font-size: 2rem;
+    color: white;
 }
 
 .allContent {
@@ -25,11 +26,11 @@ header {
     min-width: fit-content;
     padding: 30px;
     height: 100vh;
-    border-right: rgb(177, 177, 177) solid 2px;
+    border-right: #d8d8d8 solid 2px;
 }
 
 form {
-    border-bottom: 2px solid rgb(177, 177, 177);
+    border-bottom: 2px solid #d8d8d8;
 }
 
 input {
@@ -43,14 +44,14 @@ input {
     width: 100%;
     outline: 0;
     color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+    background-color: #06b6d4;
     display: inline-block;
     font-weight: 400;
     line-height: 1.5;
     text-align: center;
     border: 1px solid transparent;
-    margin: 5px 0;
+    margin-top: 5px;
+    margin-bottom: 15px;
     padding: 6px 12px;
     font-size: 16px;
     border-radius: .25rem;
@@ -59,8 +60,7 @@ input {
 
 .btn:hover {
     color: #fff;
-    background-color: #0b5ed7;
-    border-color: #0a58ca;
+    background-color: #3b82f6;
  }
 
 .pastSearchBtn {
@@ -73,19 +73,18 @@ input {
     text-align: center;
     background-color: transparent;
     border: 1px solid transparent;
-    margin: 5px 0;
+    margin-top: 15px;
     padding: 6px 12px;
     font-size: 1rem;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    color: #0d6efd;
-    border-color: #0d6efd;
+    color: #3b82f6;
+    border-color: #3b82f6;
 }
 
 .pastSearchBtn:hover {
     color: #fff;
-    background-color: #0d6efd;
-    border-color: #0d6efd;
+    background-color: #06b6d4;
 }
 
 .cocktailInfo {
@@ -102,11 +101,15 @@ input {
 
 #cocktailImg {
     width: auto;
-    max-height: 400px;
+    max-height: 500px;
     padding-right: 50px;
     padding-top: 30px;
 }
 
 .mainContent {
     margin-left: 50px;
+}
+
+.name-of-cocktail {
+    padding: 5px;
 }
