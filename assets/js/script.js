@@ -70,7 +70,7 @@ function addInfo (n) {
       addedList.push(n);
   }
  
-  localStorage.setItem("cocktail"); JSON.stringify(addedList));
+  localStorage.setItem("cocktail"); JSON.stringify(addedList);
 };
 
 
@@ -78,8 +78,8 @@ function addInfo (n) {
 function renderInfo () {
   var historyList = getInfo();
   for (var i = 0; i < historyList.length; i++) {
-      var inputCity = historyList[i];
-      var searchCity =$("<div>") 
+      var textInput = historyList[i];
+      var textInput =$("<div>") 
       textInput.attr('id',textInput) 
       textInput.text(textInput) 
       textInput.addClass("h4")
