@@ -88,15 +88,17 @@ input {
 }
 
 .cocktailInfo {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 10px;
+    display: show;
+}
+
+.cocktail {
 }
 
 .cocktailName {
-    width: 100%;
-    font-size: larger;
-    font-weight: bold;
+    position: relative;
+    font-family: Raleway;
+    font-size: 2em;
+    
 }
 
 #cocktailImg {
@@ -108,8 +110,18 @@ input {
 
 .mainContent {
     margin-left: 50px;
+    flex: 1 0;
 }
 
 .name-of-cocktail {
     padding: 5px;
+}
+
+.right {
+    position: absolute;
+    right: 10px;
+}
+
+.noDisplay {
+    display: none;
 }

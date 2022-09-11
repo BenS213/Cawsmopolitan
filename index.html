@@ -18,7 +18,13 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
     />
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- google Raleway Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap" rel="stylesheet">
+   
+<script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
@@ -46,10 +52,8 @@
     <!-- aside for search form and previous search buttons -->
     <aside class="sidebar">
         <!-- Search cocktail form -->
-        <form>
             <input type="text" name="cocktail" placeholder="Search for a Cocktail" id="textInput" class="name-of-cocktail"><br>
-            <button for="cocktail" class="btn" id="searchBtn">Search</button>
-        </form>
+            <button for="cocktail" class="btn" id="searchBtn" onclick="getCocktailData()">Search</button>
         <!-- Past Searches -->
         <div id="pastSearches">
             <button class="pastSearchBtn">Bloody Mary</button>
@@ -58,10 +62,11 @@
 
     <!-- Main Content -->
     <div class="mainContent pt-30">
-         <div class="cocktailInfo">
-             <h2 class="cocktailName font-Raleway text-4xl py-6">Bloody Mary</h2>
+         <ul class="cocktailList">
+          <li class="cocktail">
+             <h2 class="cocktailName">Bloody Mary<button class="right" onclick=""><i class="fa-solid fa-angle-down"></i></button></h2>
              <!-- Ingredients -->
-             <div>
+              <div class="cocktailInfo">           
                 <h2 class="ingredients text-2xl pb-6">Ingredients List:</h2>
                 <ul class="ingredientsList text-xl">
                     <li>liquor</li>
@@ -69,14 +74,14 @@
                     <li>liquor</li>
                     <li>liquor</li>
                 </ul>
-             </div>
              <!-- Instructions -->
              <div class="instructions">
             <h2 class="text-2xl py-5">Instructions:</h2>
              <p class="recipe">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nobis incidunt nostrum temporibus voluptas ut vero unde dolore necessitatibus, placeat molestiae officiis facilis quasi, animi dolor quidem, dicta voluptatibus. Itaque architecto deleniti nisi asperiores porro animi, possimus et ex perferendis repellendus? Consequatur blanditiis reprehenderit iusto laboriosam magnam! Incidunt, porro odit?</p>
             </div>
-
-        </div>
+          </div> 
+            </li>
+          </ul>
 
     </div>
 
