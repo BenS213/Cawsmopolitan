@@ -39,6 +39,7 @@
  cocktailListEl.appendChild(cocktail)
  
 
+
  // This part is not working yet
 var toggleBtn = document.querySelector('.right')
 var cocktailInfoEl = document.querySelector('.cocktailInfo')
@@ -48,6 +49,45 @@ cocktailInfoEl.classList.toggle('noDisplay')
   }
 
 })
+
+//Get Local Storge Info TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function getInfo() {
+  var currentList =localStorage.getItem("cocktail");
+  if (currentList !== null ){
+      freshList = JSON.parse(currentList);
+      return freshList;
+  } else {
+      freshList = [];
+  }
+  return freshList;
+}
+
+//Add Local Info to Local Storage TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function addInfo (n) {
+  var addedList = getInfo();
+
+  if (historyList.includes(currentCocktail) === false){
+      addedList.push(n);
+  }
+ 
+  localStorage.setItem("cocktail"); JSON.stringify(addedList));
+};
+
+
+//Display History TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function renderInfo () {
+  var historyList = getInfo();
+  for (var i = 0; i < historyList.length; i++) {
+      var inputCity = historyList[i];
+      var searchCity =$("<div>") 
+      textInput.attr('id',textInput) 
+      textInput.text(textInput) 
+      textInput.addClass("h4")
+
+      $(".history").append(textInput)
+  }
+};
+
 
 
   // Cocktail Image Api

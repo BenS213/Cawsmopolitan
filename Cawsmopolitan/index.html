@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="assets\css\style.css" class="style" />
+    <title>Project-1 Cocktail finder</title>
+  </head>
+
+
+  <body>
+    <!-- Header -->
+    <header>Cocktail Finder</header>
+
+    <!-- div for both search and main content -->
+<div class="allContent">
+    <!-- aside for search form and previous search buttons -->
+    <aside class="sidebar">
+
+        <!-- Search cocktail form -->
+        <form>
+            <input type="text" name="cocktail" placeholder="Search for a Cocktail" id="textInput"><br>
+            <button for="cocktail" class="btn" id="searchBtn">Search</button>
+        </form>
+
+        <!-- Past Searches -->
+        <div id="pastSearches">
+            <button class="pastSearchBtn">bloody mary</button>
+        </div>
+    </aside>
+
+    <!-- main content -->
+    <div class="mainContent">
+         <div class="cocktailInfo">
+             <h2 class="cocktailName">bloody mary</h2>
+             <!-- ingredients -->
+             <div class="ingredients">
+                <h2>Ingredients List</h2>
+                <ul class="ingredientsList">
+                    <li>liquor</li>
+                    <li>liquor</li>
+                    <li>liquor</li>
+                    <li>liquor</li>
+                </ul>
+             </div>
+             <!-- instructions -->
+             <div class="instructions">
+            <h2>instructions</h2>
+             <p class="recipe">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id nobis incidunt nostrum temporibus voluptas ut vero unde dolore necessitatibus, placeat molestiae officiis facilis quasi, animi dolor quidem, dicta voluptatibus. Itaque architecto deleniti nisi asperiores porro animi, possimus et ex perferendis repellendus? Consequatur blanditiis reprehenderit iusto laboriosam magnam! Incidunt, porro odit?</p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- cocktail image -->
+     <img src="assets\images\200.png" alt="placeholder" id="cocktailImg">
+
+</div>
+
+    <script src="assets\js\script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </body>
+</html>
