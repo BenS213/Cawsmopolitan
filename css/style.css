@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+header {
+    width: 100%;
+    background: #11405c;
+    text-align: center;
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.allContent {
+    display: flex;
+}
+
+.sidebar {
+    min-width: min-content;
+    padding: 30px;
+    height: 100vh;
+    border-right: #d8d8d8 solid 2px;
+}
+
+form {
+    border-bottom: 2px solid #d8d8d8;
+}
+
+input {
+    padding: 10px;
+    border-radius: .25rem;
+    margin: .25rem 0;
+}
+
+.btn {
+    cursor: pointer;
+    max-width: min-content;
+    outline: 0;
+    color: #fff;
+    background-color: #06b6d4;
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    border: 1px solid transparent;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.btn:hover {
+    color: #fff;
+    background-color: #3b82f6;
+ }
+
+.pastSearchBtn {
+    cursor: pointer;
+    max-width: flex;
+    outline: 0;
+    display: flex;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    background-color: transparent;
+    border: 1px solid transparent;
+    margin-top: 15px;
+    padding: 6px 12px;
+    font-size: 1rem;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.pastSearchBtn:hover {
+    color: #fff;
+    background-color: #06b6d4;
+}
+
+
+
+
+.cocktailName {
+    position: relative;
+    font-family: Raleway;
+    font-size: 2em;
+    background-color: #06b6d4;
+    padding: .5em;
+    border-radius: 5px;
+    margin: .25em .25em .25em 0;
+    color: white;
+}
+
+#cocktailImg {
+    width: auto;
+    max-height: 500px;
+    padding-right: 50px;
+    padding-top: 30px;
+}
+
+.mainContent {
+    margin-left: 50px;
+    flex: 1 0;
+}
+
+.name-of-cocktail {
+    padding: 5px;
+}
+
+.right {
+    position: absolute;
+    right: 15px;
+}
+
+.cocktailInfo {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+.noDisplay {
+    display: none;
+}
+
+
