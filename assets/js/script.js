@@ -1,6 +1,4 @@
-
-
- function getCocktailData() {
+function getCocktailData() {
 
   var input = document.getElementById('textInput');
 
@@ -10,12 +8,12 @@
   headers: {'X-Api-Key': 'HtXIp1p3atsapFJkv5dL1w==GOFJZZ20Hi4ZxrKQ'},
   contentType: 'application/json',
 })
+
 .then(response => response.json())
 .then(json => {
-  
+
   console.log(json);
   let obj = json;
-  
 
   // loops through the data and adds the code below for each cocktail
  for(i = 0; i < obj.length; i++) {
@@ -25,7 +23,7 @@
     var cocktail = document.createElement('li')
     cocktail.innerHTML = `<h2 class="cocktailName">${currentCocktail.name}<button class="right" onclick=""><i class="fa-solid fa-angle-down"></i></button></h2>
     <!-- Ingredients -->
-     <div class="cocktailInfo">           
+     <div class="cocktailInfo">
        <h2 class="ingredients text-2xl pb-6">Ingredients List:</h2>
        <ul class="ingredientsList text-xl">
        ${ingredientsList}
@@ -37,7 +35,7 @@
    </div>
  </div> `;
  cocktailListEl.appendChild(cocktail)
- 
+
 
  // This part is not working yet
 var toggleBtn = document.querySelector('.right')
@@ -49,8 +47,7 @@ cocktailInfoEl.classList.toggle('noDisplay')
 
 })
 
-
-  // Cocktail Image Api
+// Cocktail Image Api
 fetch('https://api.unsplash.com/search/photos?per_page=1&query=' + input.value + '&client_id=kaRL9t2LFHObSdjRab4aJuRJw5iCXYWC76-ReD7Hfuo', {
   method: "GET",
   headers: {'Accept-Version': 'v1'},
@@ -62,7 +59,63 @@ fetch('https://api.unsplash.com/search/photos?per_page=1&query=' + input.value +
   var image = json.results[0].urls.regular;
   $('#cocktailImg').attr('src', image);
 });
-  
+
+window.onload = function() {
+  loadValue();
+  $('#cocktailImg').hide();
+}
+
+searchBtn.addEventListener("click", function(event) {
+  event.preventDefault();
+
+});
+
+
+
+
+//Get Local Storage Info TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function getInfo() {
+  console.log();
+  var currentList =localStorage.getItem("cocktail");
+  if (currentList !== null ){
+      freshList = JSON.parse(currentList);
+      return freshList;
+  } else {
+      freshList = [];
+  }
+  return freshList;
+}
+
+//Add Local Info to Local Storage TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function addInfo (n) {
+  var addedList = getInfo();
+
+  if (historyList.includes(currentCocktail) === false){
+      addedList.push(n);
+  }
+
+  localStorage.setItem("cocktail"); JSON.stringify(addedList);
+};
+
+
+//Display History TESTING!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function renderInfo () {
+  var historyList = getInfo();
+  for (var i = 0; i < historyList.length; i++) {
+      var textInput = historyList[i];
+      var textInput =$("<div>")
+      textInput.attr('id',textInput)
+      textInput.text(textInput)
+      textInput.addClass("h4")
+
+      $(".history").append(textInput)
+  }
+};
+
+
+
+
+
 
 // reset the input field
 input.value = ''

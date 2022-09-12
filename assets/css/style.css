@@ -91,14 +91,10 @@ input {
     display: show;
 }
 
-.cocktail {
-}
-
 .cocktailName {
     position: relative;
     font-family: Raleway;
     font-size: 2em;
-    
 }
 
 #cocktailImg {
