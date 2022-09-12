@@ -1,3 +1,4 @@
+var cocktailListEl = document.querySelector('.cocktailList');
 
 
  function getCocktailData() {
@@ -13,39 +14,51 @@
 .then(response => response.json())
 .then(json => {
   
-  console.log(json);
   let obj = json;
   
 
   // loops through the data and adds the code below for each cocktail
  for(i = 0; i < obj.length; i++) {
-    var cocktailListEl = document.querySelector('.cocktailList');
     var currentCocktail = obj[i]
+    
     var ingredientsList = currentCocktail.ingredients.join(' <br> ')
     var cocktail = document.createElement('li')
-    cocktail.innerHTML = `<h2 class="cocktailName">${currentCocktail.name}<button class="right" onclick=""><i class="fa-solid fa-angle-down"></i></button></h2>
-    <!-- Ingredients -->
-     <div class="cocktailInfo">           
-       <h2 class="ingredients text-2xl pb-6">Ingredients List:</h2>
-       <ul class="ingredientsList text-xl">
-       ${ingredientsList}
-       </ul>
-    <!-- Instructions -->
-    <div class="instructions">
-   <h2 class="text-2xl py-5">Instructions:</h2>
-    <p class="recipe">${currentCocktail.instructions}</p>
-   </div>
- </div> `;
+    cocktail.innerHTML = `
+    <li class="cocktail">
+      <h2 class="cocktailName">${currentCocktail.name}<button data-number='${[i]}'class="right"><i class="fa-solid fa-angle-down"></i></button></h2>
+      <!-- Ingredients -->
+      <div data-number='${[i]}' class="cocktailInfo ">           
+        <h2 class="ingredients text-2xl pb-6">Ingredients List:</h2>
+        <ul class="ingredientsList text-xl">
+        ${ingredientsList}
+        </ul>
+      <!-- Instructions -->
+      <div class="instructions">
+    <h2 class="text-2xl py-5">Instructions:</h2>
+      <p class="recipe">${currentCocktail.instructions}</p>
+    </div>
+  </div> 
+ </li>`;
  cocktailListEl.appendChild(cocktail)
  
-
  // This part is not working yet
-var toggleBtn = document.querySelector('.right')
-var cocktailInfoEl = document.querySelector('.cocktailInfo')
-toggleBtn.addEventListener('click', function() {
-cocktailInfoEl.classList.toggle('noDisplay')
-})
+
   }
+
+// adds a toggle button to each cocktail to show or hide the coctail's info
+var btns = document.querySelectorAll('.right');
+var cocktailInfo = document.querySelectorAll('.cocktailInfo');
+
+for (i = 0; i < btns.length; i++) {
+  btns[i].addEventListener('click', toggleView);
+}
+
+function toggleView() {
+  console.log(cocktailInfo[this.dataset.number])
+  cocktailInfo[this.dataset.number].classList.toggle('show')
+
+}
+
 
 })
 
@@ -58,7 +71,6 @@ fetch('https://api.unsplash.com/search/photos?per_page=1&query=' + input.value +
 })
 .then(response => response.json())
 .then(function (json) {
-  console.log(json);
   var image = json.results[0].urls.regular;
   $('#cocktailImg').attr('src', image);
 });
@@ -67,3 +79,4 @@ fetch('https://api.unsplash.com/search/photos?per_page=1&query=' + input.value +
 // reset the input field
 input.value = ''
 }
+
