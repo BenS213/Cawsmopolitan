@@ -22,7 +22,7 @@ header {
 }
 
 .sidebar {
-    min-width: fit-content;
+    min-width: min-content;
     padding: 30px;
     height: 100vh;
     border-right: #d8d8d8 solid 2px;
@@ -40,7 +40,7 @@ input {
 
 .btn {
     cursor: pointer;
-    width: 100%;
+    max-width: min-content;
     outline: 0;
     color: #fff;
     background-color: rgb(127 29 29);
@@ -64,12 +64,12 @@ input {
 
 .pastSearchBtn {
     cursor: pointer;
-    width: 100%;
+    max-width: flex;
     outline: 0;
-    display: inline-block;
+    display: flex;
     font-weight: 400;
     line-height: 1.5;
-    text-align: center;
+    text-align: left;
     background-color: transparent;
     border: 1px solid transparent;
     margin-top: 15px;
