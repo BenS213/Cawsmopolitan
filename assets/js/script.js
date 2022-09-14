@@ -8,7 +8,7 @@ function getCocktailData(input) {
     localStorage.setItem(removeSpaces, input);
     var pastSearches = $("#pastSearches");
     pastSearches.append(
-      "<button class=\"pastSearchBtn\">" + input + "</button>"
+      `<button class=\"pastSearchBtn\" id=${input}>` + input + `</button>`
     );
   }
   // Cocktail Recipe Api
@@ -20,8 +20,17 @@ function getCocktailData(input) {
     let obj = json;
     console.log(obj);
 
+    if(obj.length === 0) {
+      console.log('error')
+      localStorage.removeItem(input)
+      var itemToRemove = document.getElementById(input);
+      itemToRemove.remove()
+      var modal = document.querySelector('.modal');
+      modal.classList.remove('noDisplay')
+       }
+
       // loops through the data and adds the code below for each cocktail
-    for(i = 0; i < obj.length; i++) {
+    for(let i = 0; i < obj.length; i++) {
         var currentCocktail = obj[i]
         var ingredientsList = currentCocktail.ingredients.join(' <br> ')
         var cocktail = document.createElement('li')
@@ -43,8 +52,9 @@ function getCocktailData(input) {
         </li>`;
       cocktailListEl.appendChild(cocktail)
     }
+  
 
-    // adds a toggle button to each cocktail to show or hide the coctail's info
+    // adds a toggle button to each cocktail to show or hide the cocktail's info
     var btns = document.querySelectorAll('.right');
     var cocktailInfo = document.querySelectorAll('.cocktailInfo');
 
@@ -58,6 +68,7 @@ function getCocktailData(input) {
     // reset the input field
     document.getElementById('textInput').value = '';
   })
+  
 }
 
 function getImage(input) {
@@ -123,3 +134,9 @@ $(document).ready(function(){
     }
   });
 });
+
+function removeModal () {
+  var modal = document.querySelector('.modal');
+  modal.classList.remove('show')
+  location.reload()
+}
