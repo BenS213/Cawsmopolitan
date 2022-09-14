@@ -61,8 +61,8 @@ function getCocktailData(input) {
 }
 
 function getImage(input) {
-  // Cocktail Image Api
-  fetch('https://api.unsplash.com/search/photos?per_page=1&query=' + input + '&client_id=kaRL9t2LFHObSdjRab4aJuRJw5iCXYWC76-ReD7Hfuo', {
+  // Unsplash Api
+  fetch('https://api.unsplash.com/search/photos?per_page=1&query=' + input + '&orientation=portrait&collections=cocktail&client_id=kaRL9t2LFHObSdjRab4aJuRJw5iCXYWC76-ReD7Hfuo', {
     method: "GET",
     headers: {'Accept-Version': 'v1'},
     contentType: 'application/json',

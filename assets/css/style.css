@@ -87,9 +87,6 @@ input {
     background-color: #06b6d4;
 }
 
-
-
-
 .cocktailName {
     position: relative;
     font-family: Raleway;
@@ -99,6 +96,7 @@ input {
     border-radius: 5px;
     margin: .25em .25em .25em 0;
     color: white;
+
 }
 
 #cocktailImg {
@@ -115,11 +113,14 @@ input {
 
 .name-of-cocktail {
     padding: 5px;
+    transition: 0.5s;
 }
 
 .right {
     position: absolute;
     right: 15px;
+    transition: 0.5s;
+
 }
 
 .cocktailInfo {
@@ -128,9 +129,35 @@ input {
 
 .show {
     display: block;
+    transition: 3s ease-out;
+
 }
 .noDisplay {
     display: none;
 }
 
+.modal {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    top: 0;
+}
+.modalInner {
+    display: flex;
+    position: absolute;
+    z-index: 99999;
+    width: 25%;
+    height: 25%;
+    background-color: black;
+    color: white;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
+.close {
+    display: flex;
+    margin: auto;
+}
