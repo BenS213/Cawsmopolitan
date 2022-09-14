@@ -37,9 +37,9 @@ function getCocktailData(input) {
         var cocktail = document.createElement('li')
         cocktail.innerHTML = `
         <li class="cocktail">
-          <h2 class="cocktailName">${currentCocktail.name}<button data-number='${[i]}'class="right"><i class="fa-solid fa-angle-down"></i></button></h2>
+          <h2 class="cocktailName">${currentCocktail.name}<button data-number='${[i]}'class="right"><i data-number='${[i]}'class="fa-solid fa-angle-down"></i></button></h2>
           <!-- Ingredients -->
-          <div data-number='${[i]}' class="cocktailInfo ">
+          <div data-number='${[i]}' class="cocktailInfo">
             <h2 class="ingredients text-2xl pb-6">Ingredients List:</h2>
             <ul class="ingredientsList text-xl">
             ${ingredientsList}
@@ -63,7 +63,9 @@ function getCocktailData(input) {
       btns[i].addEventListener('click', toggleView);
     }
 
-    cocktailInfo[0].classList.toggle('show')
+    cocktailInfo[0].classList.toggle('show');
+    var arrowBtnIcon = document.querySelectorAll('i')
+    arrowBtnIcon[0].classList.toggle('flipIcon')
 
     getImage(input);
     // reset the input field
@@ -103,6 +105,8 @@ function toggleView() {
   var cocktailInfo = document.querySelectorAll('.cocktailInfo');
   console.log(cocktailInfo[this.dataset.number])
   cocktailInfo[this.dataset.number].classList.toggle('show')
+  var arrowBtnIcon = document.querySelectorAll('i')
+  arrowBtnIcon[this.dataset.number].classList.toggle('flipIcon')
 }
 
 searchBtn.addEventListener("click", function(event) {

@@ -96,7 +96,6 @@ input {
     border-radius: 5px;
     margin: .25em .25em .25em 0;
     color: white;
-
 }
 
 #cocktailImg {
@@ -110,6 +109,7 @@ input {
     margin-left: 50px;
     flex: 1 0;
     color: rgb(127 29 29);
+    
 }
 
 .mainContent h2 {
@@ -129,12 +129,15 @@ input {
 
 }
 
+
 .cocktailInfo {
     display: none;
+
 }
 
 .show {
     display: block;
+    
 }
 .noDisplay {
     display: none;
@@ -183,4 +186,19 @@ input {
     border-radius: 3px;
     margin: 20px 0;
     padding: 4px 8px;
+}
+
+i {
+    transition: .2s;
+}
+
+i:hover {
+    padding: 0;
+    background-color: rgba(0,0,0,0.4);
+    padding: 6px 10px;
+    border-radius: 50%;
+}
+
+.flipIcon {
+    transform: rotate(180deg);
 }
