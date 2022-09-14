@@ -26,7 +26,7 @@ function getCocktailData(input) {
       var itemToRemove = document.getElementById(input);
       itemToRemove.remove()
       var modal = document.querySelector('.modal');
-      modal.classList.remove('show')
+      modal.classList.remove('noDisplay')
        }
 
       // loops through the data and adds the code below for each cocktail
