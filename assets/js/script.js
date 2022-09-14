@@ -8,7 +8,7 @@ function getCocktailData(input) {
     localStorage.setItem(removeSpaces, input);
     var pastSearches = $("#pastSearches");
     pastSearches.append(
-      `<button class=\"pastSearchBtn\" id=${input}>` + input + `</button>`
+      `<button class=\"pastSearchBtn\" id=${removeSpaces}>` + input + `</button>`
     );
   }
   // Cocktail Recipe Api
@@ -21,9 +21,10 @@ function getCocktailData(input) {
     console.log(obj);
 
     if(obj.length === 0) {
-      console.log('error')
-      localStorage.removeItem(input)
-      var itemToRemove = document.getElementById(input);
+      console.log(obj)
+      var removeSpaces = input.replaceAll(" ", "");
+      localStorage.removeItem(removeSpaces)
+      var itemToRemove = document.getElementById(removeSpaces);
       itemToRemove.remove()
       var modal = document.querySelector('.modal');
       modal.classList.remove('noDisplay')
